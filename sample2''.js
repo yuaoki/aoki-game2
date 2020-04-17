@@ -29,15 +29,17 @@ while(true) {
 		let attack = hero.attack();
 		enemyHP = enemyHP - attack;
 		console.log(hero.name + 'は' + enemy.name + 'に' + attack + 'のダメージを与えた！');
+		if (enemyHP > 0) {
 		console.log(enemy.name + 'の体力は残り' + enemyHP + 'だ！');
 		let enemyAttack = enemy.attack();
 		heroHP = heroHP - enemyAttack;
 		console.log(hero.name + 'は' + enemy.name + 'に' + enemyAttack + 'のダメージを受けた！');
 		console.log(hero.name + '：HP' + heroHP)
+		}
 		if (enemyHP <=0) {
 			console.log('敵を倒した！');
 			break;
-		}else if (heroHP <=0) {
+		} else if (heroHP <=0) {
 			console.log('全滅してしまった………');
 			break;
 		}
